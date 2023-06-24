@@ -1,0 +1,24 @@
+class TravelPlanner:
+    def __init__(self):
+        self.destinations = []
+
+    def add_destination(self, destination):
+        self.destinations.append(destination)
+        print(f"Destination '{destination}' added successfully.")
+
+    def view_destinations(self):
+        if not self.destinations:
+            print("No destinations added.")
+        else:
+            print("Destinations:")
+            for destination in self.destinations:
+                print(destination)
+
+if __name__ == '__main__':
+    travel_planner = TravelPlanner()
+
+    travel_planner.add_destination("Paris")
+    travel_planner.add_destination("New York")
+    travel_planner.add_destination("Tokyo")
+
+    travel_planner.view_destinations()
